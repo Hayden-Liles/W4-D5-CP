@@ -1,1 +1,13 @@
 /* BASIC STYLES HERE */
+
+body{
+  background-size: cover;
+  background-position: center;
+}
+p{
+  margin: 0;
+}
+
+#background-author{
+  background-color: rgba(0, 0, 0, 0.372);
+}
