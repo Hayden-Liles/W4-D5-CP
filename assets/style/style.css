@@ -1,13 +1,18 @@
 /* BASIC STYLES HERE */
 
+
 body{
   background-size: cover;
   background-position: center;
+  background-color: black;
+  color: black;
 }
 p{
   margin: 0;
 }
 
+/* light */
 #background-author{
-  background-color: rgba(0, 0, 0, 0.372);
+  background-color: rgba(131, 130, 130, 0.702);
 }
+

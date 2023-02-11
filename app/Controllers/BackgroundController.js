@@ -8,7 +8,7 @@ async function drawBackground(){
   try {
     await backgroundsService.drawBackground()
     document.body.style.backgroundImage = `url(${appState.background.url})`
-    setText('background-author', appState.background.author)
+    setText('background-author', `Image by: ${appState.background.author}`)
   }
   catch(error) {
     console.error(error)
