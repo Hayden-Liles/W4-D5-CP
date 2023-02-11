@@ -8,7 +8,11 @@ class AppState extends EventEmitter {
   values = loadState('values', [Value])
 
   /** @type {import('./Models/Background').Background} */
+  // @ts-ignore
   background = null
+
+  /** @type {import('./Models/Weather.js').Weather[]} */
+  temps = []
 }
 
 export const appState = new Proxy(new AppState(), {
