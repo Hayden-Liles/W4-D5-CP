@@ -16,3 +16,13 @@ p{
   background-color: rgba(131, 130, 130, 0.702);
 }
 
+#temp-container{
+  background-color: rgba(214, 206, 255, 0.702);
+}
+#temp-high-low{
+  font-size: 1.1em;
+}
+#temp-loc{
+  font-size: .9em;
+}
+

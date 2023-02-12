@@ -13,6 +13,10 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/Weather.js').Weather[]} */
   temps = []
+
+  /** @type {import('./Models/Weather.js').Weather} */
+  // @ts-ignore
+  curTemp = null
 }
 
 export const appState = new Proxy(new AppState(), {

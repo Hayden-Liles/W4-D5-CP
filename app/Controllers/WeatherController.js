@@ -1,20 +1,30 @@
 import { appState } from "../AppState.js";
 import { weatherService } from "../Services/WeatherService.js";
 import { Pop } from "../Utils/Pop.js";
+import { setHTML } from "../Utils/Writer.js";
 
 
-async function drawWeather(){
+async function retrieveWeather(){
     try {
-        await weatherService.drawWeather()
-        console.log(appState.temps)
+        await weatherService.retrieveWeather()
     } catch (error) {
         console.error(error)
         Pop.error(error)
     }
 }
 
+function drawWeather(){
+    setHTML('temp-container', appState.curTemp.weatherTemplate)
+}
+
 export class WeatherController{
     constructor() {
-        drawWeather()
+        retrieveWeather()
+        appState.on('curTemp', drawWeather)
     }
+
+    changeTemp(){
+        weatherService.changeTemp()
+    }
+
 }
