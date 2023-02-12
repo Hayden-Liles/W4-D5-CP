@@ -16,9 +16,23 @@ async function drawBackground(){
   }
 }
 
+function drawTime(){
+  const time = new Date()
+  const timeStr = time.toLocaleTimeString(undefined, {
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  })
+  setText('time-text', timeStr)
+}
+
 export class BackgroundsController{
 
   constructor(){
     drawBackground()
+    drawTime()
+    setInterval(() => {
+        drawTime()
+    }, 1000);
   }
 }

@@ -2,49 +2,90 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="color-scheme">
-  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
-    integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="assets/style/main.css">
-  <link rel="stylesheet" href="assets/style/style.css">
-  <title>W4-D5-CP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="color-scheme">
+    <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.1.96/css/materialdesignicons.min.css"
+        integrity="sha512-NaaXI5f4rdmlThv3ZAVS44U9yNWJaUYWzPhvlg5SC7nMRvQYV9suauRK3gVbxh7qjE33ApTPD+hkOW78VSHyeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <title>W4-D5-CP</title>
 </head>
 
 <body>
-  <main>
-    <!-- STUB background & author -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-12 d-flex justify-content-between">
-          <div  class="p-1 mt-1">
-            <p id="background-author"></p>
-            <button class="mdi mdi-theme-light-dark fs-3 mt-2"></button>
-          </div>
-          <!-- STUB Weather div -->
-          <div id="temp-container" class="text-center mt-2">
-          </div>
+    <main>
+        <!-- STUB background & author -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between" id="top-section">
+                    <div class="p-1 mt-1">
+                        <p id="background-author"></p>
+                        <button class="mdi mdi-theme-light-dark fs-3 mt-2"></button>
+                    </div>
+                    <!-- STUB Weather div -->
+                    <div id="temp-div" class="mt-2 border btn d-flex flex-shrink-0">
+                        <div id="temp-container" class="text-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- STUB Cur Time -->
+            <div class="row" id="time-container">
+                <div class="col-12 d-flex justify-content-center align-items-center">
+                    <div>
+                        <p class="fw-bold p-2" id="time-text">00:00:00 AM</p>
+                    </div>
+                </div>
+            </div>
+            <!-- STUB BOTTOM - TODO - Quote -->
+            <div class="row">
+                <div class="col-12 d-flex justify-content-end">
+                    <div class="w-25" id="task-div">
+                        <div id="task-container" class="bg-light px-3 py-1">
+                            <div class="d-flex justify-content-between">
+                                <p class="fs-5 py-2">Todo:</p>
+                                <p class="fs-5"><u id="todo-count">4</u></p>
+                            </div>
+                            <div id="task-form" class="align-content-between">
+
+                                <form class="d-flex align-items-center" onsubmit="app.tasksController.createTask()">
+                                    <button type="submit"><i class="mdi mdi-plus-box fs-3 text-center text-success"></i></button>
+                                    <input type="text" name="description" id="description" maxlength="37" minlength="3" required placeholder="finish drawing owl">
+                                </form>
+
+                                <div id="tasks-container" class="my-3">
+                                    <!-- MAX SIZE 37 charectars -->
+                                    <div class="d-flex align-items-center my-bg-grad mb-2 justify-content-between">
+                                        <div class="d-flex align-it
+                                        ems-center">
+                                            <input type="checkbox" class="ms-1 fs-3 checkbox-size">
+                                            <p class="fs-5 p-2">task#1aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                                        </div>
+                                        <i class="mdi mdi-trash-can pe-2"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <!-- STUB Cur Time -->
-      <div class="row">
+    </main>
 
-      </div>
-    </div>
-  </main>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
-    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
-  <script src="app/App.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+        integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+        integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+    <script src="app/App.js" type="module"></script>
 </body>
 
 </html>

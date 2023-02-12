@@ -16,7 +16,7 @@ export class Weather{
 
     get weatherTemplate(){
         return`
-        <div class="px-3 py-1 border btn" onclick="app.weatherController.changeTemp()">
+        <div class="px-3 py-1" onclick="app.weatherController.changeTemp()">
             <p class="fs-3 fw-bold">${this.current}°${this.type}</p>
             <p class="pb-2" id="temp-high-low">${this.high}°/${this.low}°</p>
             <p id="temp-high-low">${this.description}</p>

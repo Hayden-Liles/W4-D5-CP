@@ -11,18 +11,52 @@ p{
   margin: 0;
 }
 
+button{
+    border: none;
+    background-color: rgba(245, 222, 179, 0);
+}
+
+#top-section{
+    height: 9.5em;
+}
 /* light */
+
 #background-author{
   background-color: rgba(131, 130, 130, 0.702);
 }
 
-#temp-container{
+#temp-div{
   background-color: rgba(214, 206, 255, 0.702);
 }
+
 #temp-high-low{
   font-size: 1.1em;
 }
 #temp-loc{
   font-size: .9em;
+}
+
+#time-container{
+    height: calc(100vh - 33.5em);
+}
+#time-text{
+    font-size: 5em;
+    background-image: linear-gradient(180deg, hsl(0deg 0% 0%), hsl(0deg 0% 100% / 65%));
+}
+#task-container{
+    height: 23em;
+    overflow-y: scroll;
+}
+#task-div{
+    padding-bottom: 1em;
+}
+
+.checkbox-size{
+    height: 18px;
+    width: 18px;
+}
+
+.my-bg-grad{
+    background-image: linear-gradient(180deg, hsl(0deg 0% 65%), hsl(0deg 0% 20% / 65%));
 }
 

@@ -11,12 +11,15 @@ class AppState extends EventEmitter {
   // @ts-ignore
   background = null
 
-  /** @type {import('./Models/Weather.js').Weather[]} */
+  /** @type {import('./Models/Weather').Weather[]} */
   temps = []
 
-  /** @type {import('./Models/Weather.js').Weather} */
+  /** @type {import('./Models/Weather').Weather} */
   // @ts-ignore
   curTemp = null
+
+  /** @type {import('./Models/Task').Task[]} */
+  tasks = []
 }
 
 export const appState = new Proxy(new AppState(), {
