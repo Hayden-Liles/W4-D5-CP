@@ -5,7 +5,7 @@ export class Task{
     constructor(data){
         this.id = data.id || generateId()
         this.description = data.description
-        this.completed = false
+        this.completed = data.completed || false
     }
 
     get taskTemplate(){

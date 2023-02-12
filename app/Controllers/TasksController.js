@@ -1,5 +1,6 @@
 // @ts-ignore
 import { appState } from "../AppState.js"
+import { todoApi } from "../Services/axiosService.js"
 import { tasksServices } from "../Services/TasksServices.js"
 import { getFormData } from "../Utils/FormHandler.js"
 import { Pop } from "../Utils/Pop.js"
@@ -47,7 +48,13 @@ export class TasksController{
     }
 
     async updateTask(taskId){
-        console.log("TODO update Task", taskId)
+        try {
+            await tasksServices.updateTask(taskId)
+        }
+        catch (error) {
+           console.error(error)
+           Pop.error(error)
+        }
     }
 
     async deleteTask(taskId){
