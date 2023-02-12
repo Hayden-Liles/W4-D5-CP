@@ -20,6 +20,10 @@ class AppState extends EventEmitter {
 
   /** @type {import('./Models/Task').Task[]} */
   tasks = []
+ 
+  /** @type {import('./Models/Quote').Quote} */
+  // @ts-ignore
+  quote = null
 }
 
 export const appState = new Proxy(new AppState(), {

@@ -1,62 +1,92 @@
 /* BASIC STYLES HERE */
 
 
-body{
-  background-size: cover;
-  background-position: center;
-  background-color: black;
-  color: black;
-}
-p{
-  margin: 0;
+body {
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    color: black;
 }
 
-button{
+p {
+    margin: 0;
+}
+
+button {
     border: none;
     background-color: rgba(245, 222, 179, 0);
 }
 
-#top-section{
+#top-section {
     height: 9.5em;
 }
+
 /* light */
 
-#background-author{
-  background-color: rgba(131, 130, 130, 0.702);
+#background-author {
+    background-color: rgba(131, 130, 130, 0.702);
 }
 
-#temp-div{
-  background-color: rgba(214, 206, 255, 0.702);
+#temp-div {
+    background-color: rgba(214, 206, 255, 0.702);
 }
 
-#temp-high-low{
-  font-size: 1.1em;
-}
-#temp-loc{
-  font-size: .9em;
+#temp-high-low {
+    font-size: 1.1em;
 }
 
-#time-container{
+#temp-loc {
+    font-size: .9em;
+}
+
+#time-container {
     height: calc(100vh - 33.5em);
 }
-#time-text{
+
+#time-text {
     font-size: 5em;
+}
+
+#time-div {
     background-image: linear-gradient(180deg, hsl(0deg 0% 0%), hsl(0deg 0% 100% / 65%));
 }
-#task-container{
+
+#quote-text{
+    max-width: 55vw;
+}
+
+#author-text{
+    display: none;
+    opacity: 0;
+}
+
+#quote-div:hover > #author-text{
+    display: inline;
+    animation: fadeIn 2s linear forwards;
+}
+
+
+#task-container {
     height: 23em;
     overflow-y: scroll;
 }
-#task-div{
+
+#task-div {
     padding-bottom: 1em;
 }
 
-.checkbox-size{
+
+
+.checkbox-size {
     height: 18px;
     width: 18px;
 }
 
-.my-bg-grad{
+.my-bg-grad {
     background-image: linear-gradient(180deg, hsl(0deg 0% 65%), hsl(0deg 0% 20% / 65%));
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
