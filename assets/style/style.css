@@ -51,20 +51,19 @@ button {
     background-image: linear-gradient(180deg, hsl(0deg 0% 0%), hsl(0deg 0% 100% / 65%));
 }
 
-#quote-text{
+#quote-text {
     max-width: 55vw;
 }
 
-#author-text{
+#author-text {
     display: none;
     opacity: 0;
 }
 
-#quote-div:hover > #author-text{
+#quote-div:hover>#author-text {
     display: inline;
     animation: fadeIn 2s linear forwards;
 }
-
 
 #task-container {
     height: 23em;
@@ -74,8 +73,6 @@ button {
 #task-div {
     padding-bottom: 1em;
 }
-
-
 
 .checkbox-size {
     height: 18px;
@@ -87,6 +84,11 @@ button {
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
